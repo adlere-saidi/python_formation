@@ -1,0 +1,21 @@
+    chiffre = 0
+    position = 0
+    lettres = ""
+    mots = msg.split(" ")
+    for mot in mots :
+        position += len(mot)
+        if len(mot)%2 :#si mot est impaire donc len(mot)%2 donne 1 ce qui va passer dans la condition if
+            lettres+= mot[-1]
+            chiffre += position
+        else :
+            lettres+= mot[-2]
+            chiffre += position-1
+        position += 1 
+        print(chiffre)
+    # mettre les lettres en majuscule
+    lettres = lettres.upper()
+    passe = ""
+    for lt in lettres :
+        if not lt in passe :
+            passe+= lt
+    return (chiffre, passe)

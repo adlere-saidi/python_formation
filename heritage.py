@@ -1,0 +1,39 @@
+
+class Animale():
+    nombre_pattes = 4 
+    def __init__(self,  couleur, sexe):
+        self.couleur = couleur
+        self.sexe = sexe
+        self.peau = "poilu"
+
+    def courir(self):
+        print(f"{self.nom} se deplace ")
+
+    def manger(self):
+         print( f"{self.nom} mange ")
+class Chien(Animale):
+    """
+    class qui repreente la catégorie animale "chien"
+    """
+    nombre_pattes = 4 
+
+    def __init__(self, nom, couleur, sexe, nbre_pattes):  # constructeur de la class
+        self.nom = nom
+        super().__init__(couleur, sexe)
+        #self.couleur = couleur
+        #self.sexe =  sexe
+        self.nbre_pattes = nbre_pattes
+
+    def courir(self):
+        print(f"{self.nom} se deplace ")
+
+    def aboyer(self):
+         print( f"{self.nom} haw haw ")
+
+    def manger(self):
+        print(f"{self.nom}mange")
+
+ch1 = Chien("REX", "Noir", "M" , 4)
+ch2 = Chien("RED", "Rouge", "M" , 4)
+ch2 = Chien("ALEXA", "Blanc", "F" , 4)
+print(ch1.peau)
